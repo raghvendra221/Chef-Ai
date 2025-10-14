@@ -1,0 +1,71 @@
+{% comment %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Master Chef</title>
+    <link rel="stylesheet" href="{% static 'chef/css/style.css' %}?v=1.0">
+</head>
+<body>
+    <div class="glass-container">
+        <h1>🍳 Ask Your Recipe - AI Master Chef</h1>
+        <form method="post" class="recipeform">
+            {% csrf_token %}
+            {{ form.recipe_message }}
+            <button type="submit">Get Recipe</button>
+        </form>
+        
+    </div>
+     {% if ai_recipe %}
+    <div class="glass-container recipe-output-container">
+        <h2>Recipe:</h2>
+        <textarea readonly>{{ ai_recipe }}</textarea>
+    </div>
+    {% endif %}
+    
+</body>
+</html> {% endcomment %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Master Chef</title>
+    <link rel="stylesheet" href="{% static 'chef/css/style.css' %}?v=1.0">
+</head>
+<body>
+    <!-- Form Container -->
+    <div class="glass-container">
+        <h1>🍳 Ask Your Recipe - AI Master Chef</h1>
+        <form method="post" class="recipeform">
+            {% csrf_token %}
+            {{ form.recipe_message }}
+            <button type="submit">Get Recipe</button>
+        </form>
+    </div>
+
+    <!-- Output directly on body -->
+    {% if ai_recipe %}
+    <div class="output-body">
+        <div class="chef-info">
+            <img src="{% static 'chef/image/chef.jpg' %}"  
+                 alt="Chef Animation" class="chef-image">
+            <div class="chef-intro">
+                <h3>Hi! I'm your AI Master Chef 🍳</h3>
+                <p>I will guide you step by step to cook your favorite dish!</p>
+            </div>
+        </div>
+
+        <div class="recipe-text">
+            <pre>{{ ai_recipe|safe  }}</pre>
+        </div>
+    </div>
+    {% endif %}
+    
+</body>
+</html>
+
+
+
