@@ -55,7 +55,7 @@ def askchef(recipe_message):
     # Combine system instructions + user message in one prompt
     prompt = f"""
 You are 'AI Master Chef', a friendly virtual chef.
-Return recipes in **HTML format** suitable for a web page.
+Return recipes in **HTML format** suitable for a web page.Also for irrelavant question you dont need to provide any recipe only give recipes answer
 
 Requirements:
 1. Wrap the recipe title in <h2>.
