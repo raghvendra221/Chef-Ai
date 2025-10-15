@@ -31,31 +31,31 @@ Users can type any dish name or available ingredients, and the AI will provide a
 ## 📁 Project Structure
 
 AI-Master-Chef/
-├── chef/                     # Main Django app (handles forms, AI logic, and templates)
-│   ├── migrations/           # Database migrations
-│   ├── static/               # Static assets (CSS, JS, images)
+├── chef/                     
+│   ├── migrations/           
+│   ├── static/               
 │   │   └── chef/css/style.css
-│   ├── templates/chef/       # HTML templates
+│   ├── templates/chef/       
 │   │   └── home.html
-│   ├── forms.py              # Django form for recipe input
-│   ├── views.py              # View logic for GET/POST requests
-│   ├── langchain.py          # Contains Gemini AI integration logic
-│   └── models.py             # (Optional) Database models
+│   ├── forms.py              
+│   ├── views.py              
+│   ├── langchain.py          
+│   └── models.py             
 │
-├── media/                    # Stores uploaded images
+├── media/                    
 │
-├── chefdjango/               # Django project configuration
-│   ├── settings.py           # Settings (API, static/media, etc.)
-│   ├── urls.py               # URL routing
-│   └── wsgi.py               # WSGI entry point
+├── chefdjango/               
+│   ├── settings.py           
+│   ├── urls.py               
+│   └── wsgi.py               
 │
-├── .env                      # API key and secret variables
-├── .gitignore                # Ignored files and folders (e.g., .env, __pycache__)
-├── README.md                 # Project documentation
-├── manage.py                 # Django management script
-└── requirements.txt           # Python dependencies
+├── .env                      
+├── .gitignore                
+├── README.md                 
+├── manage.py                 
+└── requirements.txt          
 
-⚙️ Installation & Setup (Run Locally)
+<h2>⚙️ Installation & Setup (Run Locally)</h2>
 
 Follow these steps to set up the project on your local machine 👇
 
@@ -64,32 +64,32 @@ git clone https://github.com/puneetyadav/AI-Master-Chef.git
 cd AI-Master-Chef
 
 2️⃣ Create and Activate Virtual Environment
-python -m venv venv
-venv\Scripts\activate   # (On Windows)
-# or
+ <br>python -m venv venv
+<br>venv\Scripts\activate   # (On Windows)
+## or
 source venv/bin/activate  # (On macOS/Linux)
 
 3️⃣ Install Dependencies
-pip install -r requirements.txt
+<br>pip install -r requirements.txt
 
 4️⃣ Set Up Environment Variables
 
-Create a file named .env in the root folder:
+<br>Create a file named .env in the root folder:
 
-GOOGLE_API_KEY="your-gemini-api-key-here"
+<br>GOOGLE_API_KEY="your-gemini-api-key-here"
 
 5️⃣ Run Migrations
-python manage.py migrate
+<br>python manage.py migrate
 
 6️⃣ Start the Development Server
-python manage.py runserver
+<br>python manage.py runserver
 
 
 Now open your browser and go to 👉 http://127.0.0.1:8000/
 
-🧠 How It Works
+<h2>🧠 How It Works</h2>
 
-User enters a dish name or ingredients in the form.
+<h3>User enters a dish name or ingredients in the form.
 
 The backend sends this input to Gemini AI model.
 
@@ -103,27 +103,11 @@ Step-by-step instructions 👨‍🍳
 
 Optional tips or serving suggestions ✨
 
-The result is displayed beautifully below the form with a friendly chef animation.
+The result is displayed beautifully below the form with a friendly chef animation.</h3>
 
-🧾 Environment Variables
-Variable	Description
-GOOGLE_API_KEY	Your Gemini API key from Google AI Studio
-📸 Preview
 
-(Add screenshots or GIFs of your app here)
+## Screenshot
 
-Example:
+<img src="Screenshot 2025-10-15 233717.png">
 
-![App Screenshot](https://your-screenshot-link.com/demo.png)
 
-👨‍💻 Author
-
-Puneet Yadav
-💼 GitHub: @puneetyadav
-
-📧 Email: puneetyadav@example.com
-
-🛡️ License
-
-This project is open-source and available under the MIT License
-.
