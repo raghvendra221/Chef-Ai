@@ -84,20 +84,24 @@ button:hover {
 }
 
 /* Output directly on body */
+/* Output directly on body */
 .output-body {
-    margin: 30px auto;
-    width: 95%;
-    max-width: 1200px;
+    margin: 40px auto;
+    width: 95%; /* Covers most of the screen */
+    max-width: 1600px; /* Still keeps it centered on ultra-wide monitors */
+    background: rgba(0, 0, 0, 0.55);
+    padding: 50px 70px;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    color: #f0f0f0;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    color: #f0f0f0;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px 30px;
-    border-radius: 15px;
-    overflow-x: auto; /* allow horizontal scroll */
+    gap: 25px;
+    overflow: hidden; /* Removes scrollbars */
     word-wrap: break-word;
+    white-space: normal;
 }
+
 
 /* Chef Info Section */
 .chef-info {
@@ -174,4 +178,21 @@ button:hover {
     }
 }
 
+
+.recipe-text pre {
+    white-space: pre-wrap; /* allows wrapping of long lines */
+    word-wrap: break-word;
+    overflow-x: hidden; /* hides horizontal scroll */
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.recipe-text {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 30px 40px;
+    border-radius: 20px;
+    line-height: 1.6;
+    color: #fff;
+    font-size: 18px;
+}
 
